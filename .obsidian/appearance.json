@@ -1,4 +1,6 @@
 {
   "cssTheme": "Prism",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "baseFontSizeAction": true,
+  "baseFontSize": 15
 }

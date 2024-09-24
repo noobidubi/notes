@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/Vortrag  Bob Marley.md",
+                "file": "IT/Basic Pentesting.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/Vortrag  Bob Marley.md",
+                "file": "IT/Basic Pentesting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/Vortrag  Bob Marley.md",
+                "file": "IT/Basic Pentesting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/Vortrag  Bob Marley.md"
+                "file": "IT/Basic Pentesting.md"
               }
             }
           },
@@ -166,8 +166,14 @@
   "active": "bf7aec873de9d71a",
   "lastOpenFiles": [
     "Welcome.md",
+    "_images/Pasted image 20240924150930.png",
+    "IT/Basic Pentesting.md",
+    "_images",
+    "_images/Pasted image 20240924145815.png",
+    "IT/nmap.md",
+    "IT",
+    "School/Vortrag  Bob Marley.md",
     "Untitled.md",
-    "School",
-    "School/Vortrag  Bob Marley.md"
+    "School"
   ]
 }
