@@ -13,6 +13,13 @@
 * **TryHackMe:**
 	- [ ] _"[[Basic Pentesting]]"_
 - **HackTheBox**
+
+### 🤔 Concepts
+- [[Networking]]
+
+
+
+
 # 🏫 School 
 #🏫 #school 
 ### 🎶 Music

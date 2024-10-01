@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/Basic Pentesting.md",
+                "file": "Networking.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5e7b5d85c16cf3f2",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IT/Basic Pentesting.md",
+                "file": "Networking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IT/Basic Pentesting.md",
+                "file": "Networking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,12 +134,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IT/Basic Pentesting.md"
+                "file": "Networking.md"
               }
             }
           },
           {
-            "id": "c49b4e5e5f2bb3c0",
+            "id": "96b5a3596fb34044",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -165,9 +166,11 @@
   },
   "active": "bf7aec873de9d71a",
   "lastOpenFiles": [
+    "Pasted image 20241001155504.png",
     "Welcome.md",
-    "_images/Pasted image 20240924150930.png",
+    "Networking.md",
     "IT/Basic Pentesting.md",
+    "_images/Pasted image 20240924150930.png",
     "_images",
     "_images/Pasted image 20240924145815.png",
     "IT/nmap.md",
