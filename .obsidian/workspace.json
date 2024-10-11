@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bf7aec873de9d71a",
+            "id": "5d64ac6e9a288ec1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,14 +17,6 @@
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "5d64ac6e9a288ec1",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           }
         ]
@@ -164,11 +156,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bf7aec873de9d71a",
+  "active": "5d64ac6e9a288ec1",
   "lastOpenFiles": [
-    "Pasted image 20241001155504.png",
     "Welcome.md",
     "Networking.md",
+    "Growing Weed.md",
+    "_images/Pasted image 20241001155504.png",
     "IT/Basic Pentesting.md",
     "_images/Pasted image 20240924150930.png",
     "_images",

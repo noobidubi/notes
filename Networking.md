@@ -26,3 +26,4 @@ To make the HTTP server accessible publicly (over the **WAN** or Wide Area Netwo
 
 #### Wireless Local Area Network (WLAN)
 a **LAN** without cables
+
