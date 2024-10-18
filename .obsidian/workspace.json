@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c1c57caf86b17235",
+        "id": "04da81ba9dc469e6",
         "type": "tabs",
         "children": [
           {
-            "id": "5d64ac6e9a288ec1",
+            "id": "1cdd68add766bb4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Networking.md",
+                "file": "Welcome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Networking.md",
+                "file": "Welcome.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Networking.md"
+                "file": "Welcome.md"
               }
             }
           },
@@ -153,23 +153,29 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5d64ac6e9a288ec1",
+  "active": "1cdd68add766bb4d",
   "lastOpenFiles": [
-    "Welcome.md",
-    "Networking.md",
-    "Growing Weed.md",
-    "_images/Pasted image 20241001155504.png",
+    "IT/Linke.sx.md",
     "IT/Basic Pentesting.md",
+    "Welcome.md",
+    "Pasted image 20241014153015.png",
+    "IT/Networking.md",
+    "Untitled.md",
+    "Growing Weed.md",
+    "_images/Pasted image 20241011155009.png",
+    "Excalidraw/Drawing 2024-10-11 15.37.30.excalidraw.md",
+    "Excalidraw",
+    "_images/Pasted image 20241001155504.png",
     "_images/Pasted image 20240924150930.png",
     "_images",
     "_images/Pasted image 20240924145815.png",
     "IT/nmap.md",
     "IT",
     "School/Vortrag  Bob Marley.md",
-    "Untitled.md",
     "School"
   ]
 }
