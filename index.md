@@ -37,5 +37,3 @@
 ### 🎶 Music
  * [[Vortrag  Bob Marley]] 
 
-# :RiQuestionFill: Other
-[[Growing Weed]] 
