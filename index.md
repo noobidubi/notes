@@ -3,6 +3,7 @@
 	- [x] publish Port _for Plex_
 	- [x] set up Quartz on GitHub pages
 	- [ ] fix plugins for quartz
+	- [ ] move notes from repo to a new branch in [quartz](https://github.com/noobidubi/quartz) 
 - **:RiTerminalBoxLine: Hack The Box: Academy**
 	- **Bug Bounty Hunting Path**
 		- [ ] [SQL Injection Fundamentals](https://academy.hackthebox.com/module/details/33)
