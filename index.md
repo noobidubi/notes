@@ -1,9 +1,12 @@
 # ✅ ToDo
 - **🧪 HomeLab**
-	- [x] publish Port _for Plex_
-	- [x] set up Quartz on GitHub pages
-	- [ ] fix plugins for quartz
-	- [ ] move notes from repo to a new branch in [quartz](https://github.com/noobidubi/quartz) 
+	- PLEX
+		- [ ] add "Desperate Housewife's" to collection
+		- [ ] transfer local data to server
+	- quartz
+		- [ ] setup quartz branch on notes repo
+		- [ ] make an update script
+		- [ ] add Iconize integration
 - **:RiTerminalBoxLine: Hack The Box: Academy**
 	- **Bug Bounty Hunting Path**
 		- [ ] [SQL Injection Fundamentals](https://academy.hackthebox.com/module/details/33)
