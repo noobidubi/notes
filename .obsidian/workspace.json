@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "IT/Linke.sx.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Linke.sx"
             }
           }
         ]
@@ -173,10 +173,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c720c0347f7d7513",
+  "active": "1cdd68add766bb4d",
   "lastOpenFiles": [
-    "other/Growing Weed.md",
     "index.md",
+    "other/Growing Weed.md",
     "_images/Pasted image 20241014153015.png",
     "other",
     "Excalidraw/Drawing 2024-10-11 15.37.30.excalidraw.md",

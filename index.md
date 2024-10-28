@@ -1,14 +1,15 @@
 # ✅ ToDo
 - **🧪 HomeLab**
-	- PLEX
+	- **PLEX**
 		- [ ] add "Desperate Housewife's" to collection
 		- [ ] transfer local data to server
-	- quartz
+	- **Quartz**
 		- [ ] setup quartz branch on notes repo
 		- [ ] make an update script
 		- [ ] add Iconize integration
 - **:RiTerminalBoxLine: Hack The Box: Academy**
 	- **Bug Bounty Hunting Path**
+		- [ ] [Introduction to Web Applications](https://academy.hackthebox.com/module/details/75)
 		- [ ] [SQL Injection Fundamentals](https://academy.hackthebox.com/module/details/33)
 		- [ ] [SQLMap Essentials](https://academy.hackthebox.com/module/details/58)
 		- [ ] [Web Service & API Attacks](https://academy.hackthebox.com/module/details/160) 
@@ -20,7 +21,6 @@
 *  **Enumeration:**
 	* [[nmap]]
 	* [[ffuf]]
-* 
 
 
 ### :RiDatabase2Fill: Service
