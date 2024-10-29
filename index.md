@@ -33,9 +33,7 @@
 	- [ ] _"[[Linke.sx]]"_
 ### 🤔 Concepts
 - [[Networking]]
-
-
-
+- [[Web Apps]]
 
 # 🏫 School
 #🏫 #school 

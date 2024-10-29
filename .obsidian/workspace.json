@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/Linke.sx.md",
+                "file": "Web Apps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linke.sx"
+              "title": "Web Apps"
             }
           }
         ]
@@ -175,12 +175,16 @@
   },
   "active": "1cdd68add766bb4d",
   "lastOpenFiles": [
+    "Pasted image 20241029154306.png",
+    "Web Apps.md",
+    "Pasted image 20241029175323.png",
+    "Pasted image 20241029154610.png",
     "index.md",
+    "IT/Linke.sx.md",
     "other/Growing Weed.md",
     "_images/Pasted image 20241014153015.png",
     "other",
     "Excalidraw/Drawing 2024-10-11 15.37.30.excalidraw.md",
-    "IT/Linke.sx.md",
     "IT/Basic Pentesting.md",
     "IT/Networking.md",
     "Untitled.md",
