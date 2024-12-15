@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Apps.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web Apps"
+              "title": "index"
             }
           }
         ]
@@ -175,28 +175,36 @@
   },
   "active": "1cdd68add766bb4d",
   "lastOpenFiles": [
-    "Pasted image 20241029154306.png",
-    "Web Apps.md",
-    "Pasted image 20241029175323.png",
-    "Pasted image 20241029154610.png",
+    "School/Metalle.md",
+    "School",
     "index.md",
+    "IT/Basic Pentesting.md",
+    "IT/MrRobotCTF.md",
+    "IT/Web Apps.md",
+    "_images/Pasted image 20241103155517.png",
+    "School/Vortrag  Bob Marley.md",
+    "_images/wakeup.webm",
+    "_images/fsociety.webm",
+    "_images/prepare.webm",
+    "_images/wallhaven-yxdrex.png",
+    "_images/waves.png",
+    "_images/geology.png",
+    "_images/feather.png",
+    "_images/wire2.png",
+    "_images/Pasted image 20241103173548.png",
+    "_images/Pasted image 20241103161651.png",
+    "_images/Pasted image 20241103160958.png",
+    "_images/Pasted image 20241103160405.png",
     "IT/Linke.sx.md",
     "other/Growing Weed.md",
-    "_images/Pasted image 20241014153015.png",
     "other",
     "Excalidraw/Drawing 2024-10-11 15.37.30.excalidraw.md",
-    "IT/Basic Pentesting.md",
     "IT/Networking.md",
     "Untitled.md",
-    "_images/Pasted image 20241011155009.png",
     "Excalidraw",
-    "_images/Pasted image 20241001155504.png",
-    "_images/Pasted image 20240924150930.png",
     "_images",
-    "_images/Pasted image 20240924145815.png",
     "IT/nmap.md",
     "IT",
-    "School/Vortrag  Bob Marley.md",
     "School"
   ]
 }

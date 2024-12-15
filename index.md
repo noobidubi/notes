@@ -3,6 +3,10 @@
 	- **PLEX**
 		- [ ] add "Desperate Housewife's" to collection
 		- [ ] transfer local data to server
+		- **Anime**
+			- [x] Add a Anime Collection to the Server
+			- [x] Add "A silent Voice" (**Urgent**)
+			- [ ] Add "Vinland Saga"
 	- **Quartz**
 		- [ ] setup quartz branch on notes repo
 		- [ ] make an update script
@@ -13,30 +17,29 @@
 		- [ ] [SQL Injection Fundamentals](https://academy.hackthebox.com/module/details/33)
 		- [ ] [SQLMap Essentials](https://academy.hackthebox.com/module/details/58)
 		- [ ] [Web Service & API Attacks](https://academy.hackthebox.com/module/details/160) 
-- **:RiSuitcaseLine: linke.sx**
+- [x] **:RiSuitcaseLine: linke.sx**
 	- [x] send a reply
-# 🖥 IT
-#IT #🖥
-### :RiToolsFill: Tools
-*  **Enumeration:**
-	* [[nmap]]
-	* [[ffuf]]
-
-
-### :RiDatabase2Fill: Service
+# :RiPencilLine: Personal Notes
+#IT / #School 
 
 ### :RiQuillPenFill: Writeups
 * **TryHackMe:**
 	- [x] _"[[Basic Pentesting]]"_
+	- [ ] "[[MrRobotCTF]]"
 - **HackTheBox**
 - **Real World**
-	- [ ] _"[[Linke.sx]]"_
-### 🤔 Concepts
-- [[Networking]]
-- [[Web Apps]]
+	- [x] _"[[Linke.sx]]"_
+### 🤔 Learning
+#IT 
+- **Basic Concepts:**  
+	- [[Networking]]
+	- [[Web Apps]]
+- :RiToolsFill: **Tools** 
+	*  **Enumeration:**
+		* [[nmap]]
+		* [[ffuf]]
 
-# 🏫 School
-#🏫 #school 
-### 🎶 Music
- * [[Vortrag  Bob Marley]] 
-
+#School 
+- **School:**
+	- Chemistry
+		- [[Metalle]]
