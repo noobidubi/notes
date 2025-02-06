@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "IT/MrRobotCTF.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "MrRobotCTF"
             }
           }
         ]
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -175,17 +176,17 @@
   },
   "active": "1cdd68add766bb4d",
   "lastOpenFiles": [
+    "_images/prepare.webm",
+    "IT/MrRobotCTF.md",
+    "index.md",
     "School/Metalle.md",
     "School",
-    "index.md",
     "IT/Basic Pentesting.md",
-    "IT/MrRobotCTF.md",
     "IT/Web Apps.md",
     "_images/Pasted image 20241103155517.png",
     "School/Vortrag  Bob Marley.md",
     "_images/wakeup.webm",
     "_images/fsociety.webm",
-    "_images/prepare.webm",
     "_images/wallhaven-yxdrex.png",
     "_images/waves.png",
     "_images/geology.png",

