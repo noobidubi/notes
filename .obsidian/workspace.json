@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "IT/MrRobotCTF.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from index"
+              "title": "Outgoing links from MrRobotCTF"
             }
           },
           {
@@ -157,11 +157,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 306.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,8 +176,10 @@
   },
   "active": "1cdd68add766bb4d",
   "lastOpenFiles": [
-    "_images/prepare.webm",
+    "_images/Pasted image 20250304073703.png",
+    "IT/nmap.md",
     "IT/MrRobotCTF.md",
+    "_images/prepare.webm",
     "index.md",
     "School/Metalle.md",
     "School",
@@ -204,7 +206,6 @@
     "Untitled.md",
     "Excalidraw",
     "_images",
-    "IT/nmap.md",
     "IT",
     "School"
   ]
