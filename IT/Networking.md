@@ -43,7 +43,7 @@ That's because it is based on _coaxial cable_ which has the limitation of only o
 
 when a **BUS** tries to connect to a **WAN** one of the hosts needs to be a router.
 ### Example
-**A:** _is a router_ 
+**A:** _a router_ 
 **B:** _a computer that tries to go on a website_ 
 	**B** will send a request to the router(**A**) that sends a request to the **WAN** to www.example.com then the router(**A**) will get the response and send it over the **LAN** back to **B**
 the downside is that when **C**(_a telephone_) tries to make a call while someone is trying to access the web, then it won't work for anybody. _because only one host can send at a time._

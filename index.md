@@ -1,12 +1,5 @@
 # ✅ ToDo
 - **🧪 HomeLab**
-	- **PLEX**
-		- [ ] add "Desperate Housewife's" to collection
-		- [ ] transfer local data to server
-		- **Anime**
-			- [x] Add a Anime Collection to the Server
-			- [x] Add "A silent Voice" (**Urgent**)
-			- [ ] Add "Vinland Saga"
 	- **Quartz**
 		- [ ] setup quartz branch on notes repo
 		- [ ] make an update script
@@ -21,7 +14,7 @@
 	- [x] send a reply
 # :RiPencilLine: Personal Notes
 #IT / #School 
-
+- [[Apple Pwnbox(on mac mini 2009)]] 
 ### :RiQuillPenFill: Writeups
 * **TryHackMe:**
 	- [x] _"[[Basic Pentesting]]"_
