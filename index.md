@@ -17,11 +17,12 @@
 - [[Apple Pwnbox(on mac mini 2009)]] 
 ### :RiQuillPenFill: Writeups
 * **TryHackMe:**
-	- [x] _"[[Basic Pentesting]]"_
-	- [ ] "[[MrRobotCTF]]"
+	- [x] _[[Basic Pentesting]]_
+	- [x] [[MrRobotCTF]]
+	- [ ] [[Lookup]] 
 - **HackTheBox**
 - **Real World**
-	- [x] _"[[Linke.sx]]"_
+	- [x] _[[Linke.sx]]_
 ### 🤔 Learning
 #IT 
 - **Basic Concepts:**  

@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Apple Pwnbox(on mac mini 2009)"
             }
+          },
+          {
+            "id": "24dfd56e77b80a08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lookup.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lookup"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -177,20 +192,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "96b5a3596fb34044",
+  "active": "24dfd56e77b80a08",
   "lastOpenFiles": [
+    "Pasted image 20250424182331.png",
+    "Pasted image 20250423151547.png",
+    "IT/MrRobotCTF.md",
+    "Lookup.md",
+    "IT/Networking.md",
+    "IT/Web Apps.md",
+    "index.md",
+    "Pasted image 20250423145852.png",
+    "Pasted image 20250423145755.png",
+    "Pasted image 20250423145014.png",
+    "IT/Linke.sx.md",
     "find.md",
     "IT/Apple Pwnbox(on mac mini 2009).md",
-    "index.md",
-    "IT/Networking.md",
-    "IT/MrRobotCTF.md",
     "IT/nmap.md",
     "_images/Pasted image 20250304073703.png",
     "_images/prepare.webm",
     "School/Metalle.md",
     "School",
     "IT/Basic Pentesting.md",
-    "IT/Web Apps.md",
     "_images/Pasted image 20241103155517.png",
     "School/Vortrag  Bob Marley.md",
     "_images/wakeup.webm",
@@ -199,11 +221,6 @@
     "_images/waves.png",
     "_images/geology.png",
     "_images/feather.png",
-    "_images/wire2.png",
-    "_images/Pasted image 20241103173548.png",
-    "_images/Pasted image 20241103161651.png",
-    "_images/Pasted image 20241103160958.png",
-    "IT/Linke.sx.md",
     "other/Growing Weed.md",
     "other",
     "Excalidraw/Drawing 2024-10-11 15.37.30.excalidraw.md",
