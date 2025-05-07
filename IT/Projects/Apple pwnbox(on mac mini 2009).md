@@ -8,10 +8,10 @@ In this project I wanted to turn my apple mac mini into a pwnbox server using No
 after all of this trouble using the parrot OS image I just decided to use Debian and the Parrot Conversion Script
 
 # Installing Debian on mac
-Installing Debian was a Lot simpler than installing Parrot it was basically just using Belena etcher to create a bootable USB stick(using the Debian amd64 netinst image) plugging that into the mac mini and then booting from it
+Installing Debian was a Lot simpler than installing Parrot it was basically just using Belena etcher to create a bootable USB stick(using the `Debian amd64 netinst` image) plugging that into the mac mini and then booting from it
 
 ## Driver Issues
-the Debian netinstaller images don't provide the `linux-firmware-nonfree` packages which are required to use the mac's onboard wifi chip in specific it was missing the b43 kernel module for that chip luckily these are already in the debian repository so all I had to do was
+the Debian netinstaller images don't provide the `linux-firmware-nonfree` packages which are required to use the mac's onboard WiFi chip in specific it was missing the b43 kernel module for that chip luckily these are already in the Debian repository so all I had to do was
 ```bash
 sudo apt update
 sudo apt install firmware-linux-nonfree firmware-b43-installer
@@ -21,7 +21,7 @@ sudo apt install firmware-linux-nonfree firmware-b43-installer
 ```
 
 ### Blacklisted Driver
-Theres a chance that even if the b43 drivers are installed they still dont load into the kernel. This might be a conflict so we should first try manually loading it into the kernel and checking if that works
+Theres a chance that even if the b43 drivers are installed they still don't load into the kernel. This might be a conflict so we should first try manually loading it into the kernel and checking if that works
 ```bash
 sudo modprobe -r b43 # unloads the kernel module
 sudo modprobe b43 # try's to load the kernel module(if this fails it might be due to failed installation or conflicts)
