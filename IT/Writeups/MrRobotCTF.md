@@ -16,11 +16,11 @@ PORT    STATE  SERVICE
 ```
 *lets check out the http(s) server...*
 ### http server
-when we open the page we are greeted with a grub boot screen and then this
+upon opening the page we are greeted with a grub boot screen and then this
 ![[Pasted image 20241103155517.png]]
 #### Commands
 **Prepare:**
-	we are greeted with a video...
+	using this command shows us a video...
 	[[prepare.webm]]
 **Fsociety:**
 	we get another video
@@ -45,8 +45,8 @@ fsocity.dic
 key-1-of-3.txt
 ```
 these are 2 files on the http server 
-* `fsocity.dic` is a wordlist
-* `key-1-of-3.txt` is the first key
+* `fsocity.dic` a wordlist
+* `key-1-of-3.txt` the first key
 
 #### Fuzzing
 ```
