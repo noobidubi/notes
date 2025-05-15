@@ -2,9 +2,7 @@ Hey These are my markdown notes mainly focused around **Cyber-security** but I a
 # ✅ ToDo
 - **🧪 HomeLab**
 	- **Quartz**
-		- [ ] setup quartz branch on notes repo
-		- [ ] make an update script
-		- [ ] add Iconize integration
+		- [ ] setup quartz on my Server
 - **:RiTerminalBoxLine: Hack The Box: Academy**
 	- **Bug Bounty Hunting Path**
 		- [ ] [Introduction to Web Applications](https://academy.hackthebox.com/module/details/75)
