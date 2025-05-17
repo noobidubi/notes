@@ -2,13 +2,15 @@ Hey These are my markdown notes mainly focused around **Cyber-security** but I a
 # ToDo
 - **Projects**
 	- **[[Apple pwnbox(on mac mini 2009)]]:** 
-		Make storage non-persistent *maybe mount a network drive for storage*
-		Also setup wine / wine-tricks for windows emulation(*Burp Premium*)
+		- [ ] Test System for security Issues + Remove all of my  *Personal* Credentials
+		- [ ] Create a folder for persistent storage + *maybe backup script for backing persistent folder up in a NFS share*
+		- [ ] Make storage non-persistent *maybe mount a network drive for storage*
+		- [ ] Also setup wine / wine-tricks for windows emulation(*Burp Premium*)
 	- **Jailbreak Android:**
 		Wanna do some experimentation with android maybe adding a subsystem or VM within one of my phones basically having something like dual boot
 - **HomeLab**
 	- [ ] **Setup Git-tea**
-		for backing up my dot-files and Notes
+		*for backing up my dot-files and Notes*
 - **Hack The Box: Academy**
 	- **Bug Bounty Hunting Path**
 		- [ ] [Introduction to Web Applications](https://academy.hackthebox.com/module/details/75)

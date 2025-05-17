@@ -1,6 +1,9 @@
 {
-  "cssTheme": "Prism",
+  "cssTheme": "Red Graphite",
   "theme": "obsidian",
   "baseFontSizeAction": true,
-  "baseFontSize": 16
+  "baseFontSize": 14,
+  "monospaceFontFamily": "Source Code Pro",
+  "textFontFamily": "Bodoni 72",
+  "interfaceFontFamily": "Bodoni 72"
 }
