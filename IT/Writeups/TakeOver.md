@@ -3,8 +3,8 @@ Enumeration
 
 # Enumeration
 The description says:
-	"This challenge revolves around subdomain enumeration."
-	So I'll try to focus on that.
+> " This challenge revolves around subdomain enumeration."
+>  so I'll try to focus on that.
 ## Nmap
 First, let's run an Nmap scan to get an idea of what we're dealing with:
 ```bash

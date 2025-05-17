@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#LAN-Topologie",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IT/Apple Pwnbox(on mac mini 2009).md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Apple Pwnbox(on mac mini 2009)"
+              "title": "Outgoing links from index"
             }
           },
           {
@@ -128,7 +128,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -140,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IT/Apple Pwnbox(on mac mini 2009).md",
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Apple Pwnbox(on mac mini 2009)"
+              "title": "Outline of index"
             }
           },
           {
@@ -179,8 +181,9 @@
   },
   "active": "2364b89fa2074b12",
   "lastOpenFiles": [
-    "IT/Writeups/TakeOver.md",
+    "IT/Writeups/Lookup.md",
     "index.md",
+    "IT/Writeups/TakeOver.md",
     "Pasted image 20250515131040.md",
     "_images/Pasted image 20250515131040.png",
     "IT/Writeups/MrRobotCTF.md",
@@ -194,7 +197,6 @@
     "_images/wakeup.webm",
     "_images/fsociety.webm",
     "_images/prepare.webm",
-    "IT/Writeups/Lookup.md",
     "IT/Writeups/Basic Pentesting.md",
     "IT/Notes/Networking.md",
     "IT/Projects",
