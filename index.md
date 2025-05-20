@@ -4,7 +4,7 @@ Hey These are my markdown notes mainly focused around **Cyber-security** but I a
 	- **[[Apple pwnbox(on mac mini 2009)]]:** 
 		- [ ] Test System for security Issues + Remove all of my  *Personal* Credentials
 		- [ ] Create a folder for persistent storage + *maybe backup script for backing persistent folder up in a NFS share*
-		- [ ] Make storage non-persistent *maybe mount a network drive for storage*
+		- [ ] Make storage non-persistent
 		- [ ] Also setup wine / wine-tricks for windows emulation(*Burp Premium*)
 	- **Jailbreak Android:**
 		Wanna do some experimentation with android maybe adding a subsystem or VM within one of my phones basically having something like dual boot

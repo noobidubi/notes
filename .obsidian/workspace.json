@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "IT/Writeups/Lo-Fi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Lo-Fi"
+            }
+          },
+          {
+            "id": "1249e866e9f5917a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -181,8 +191,18 @@
   },
   "active": "2364b89fa2074b12",
   "lastOpenFiles": [
-    "IT/Notes/Networking.md",
+    "Pasted image 20250520201122.png",
+    "IT/Writeups/Lo-Fi.md",
     "index.md",
+    "IT/Projects/Apple pwnbox(on mac mini 2009).md",
+    "IT/Notes/Networking.md",
+    "_images/waves.png",
+    "_images/wire2.png",
+    "_images/wallhaven-yxdrex.png",
+    "_images/wakeup.webm",
+    "_images/geology.png",
+    "_images/feather.png",
+    "_images/fsociety.webm",
     "IT/Writeups/MrRobotCTF.md",
     "IT/Writeups/TakeOver.md",
     "School/Metalle.md",
@@ -195,24 +215,16 @@
     "_images/Pasted image 20250424182331.png",
     "_images/Pasted image 20240924145815.png",
     "dali.linke.sx.md",
-    "IT/Projects/Apple pwnbox(on mac mini 2009).md",
     "IT/Projects/Web Apps.md",
-    "_images/wakeup.webm",
-    "_images/fsociety.webm",
     "_images/prepare.webm",
     "IT/Projects",
     "IT/Notes",
     "IT/Writeups",
     "_images/Pasted image 20250423145014.png",
     "_images/Pasted image 20250423151547.png",
-    "_images/Pasted image 20250423145852.png",
-    "_images/Pasted image 20250423145755.png",
     "find.md",
-    "_images/Pasted image 20250304073703.png",
     "School",
-    "_images/Pasted image 20241103155517.png",
     "School/Vortrag  Bob Marley.md",
-    "_images/wallhaven-yxdrex.png",
     "other/Growing Weed.md",
     "other",
     "Excalidraw/Drawing 2024-10-11 15.37.30.excalidraw.md",
