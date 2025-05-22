@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/Writeups/Lo-Fi.md",
+                "file": "School/US-Geschichte.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lo-Fi"
+              "title": "US-Geschichte"
             }
           },
           {
@@ -191,9 +191,11 @@
   },
   "active": "2364b89fa2074b12",
   "lastOpenFiles": [
-    "Pasted image 20250520201122.png",
-    "IT/Writeups/Lo-Fi.md",
     "index.md",
+    "School/US-Geschichte.md",
+    "Ereignisse der US-Geschichte.md",
+    "IT/Writeups/Lo-Fi.md",
+    "_images/Pasted image 20250520201122.png",
     "IT/Projects/Apple pwnbox(on mac mini 2009).md",
     "IT/Notes/Networking.md",
     "_images/waves.png",
@@ -221,7 +223,6 @@
     "IT/Notes",
     "IT/Writeups",
     "_images/Pasted image 20250423145014.png",
-    "_images/Pasted image 20250423151547.png",
     "find.md",
     "School",
     "School/Vortrag  Bob Marley.md",
