@@ -1,0 +1,63 @@
+A classic Linux CTF focusing on web enumeration/exploitation
+
+# Enumeration
+## Nmap
+after trying out some ports I made this scan
+```bash
+$ nmap -sC -sV 10.10.11.64 -p22,80,443
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-06-15 14:55 CEST
+Nmap scan report for nocturnal.htb (10.10.11.64)
+Host is up (0.070s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  open   ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 20:26:88:70:08:51:ee:de:3a:a6:20:41:87:96:25:17 (RSA)
+|   256 4f:80:05:33:a6:d4:22:64:e9:ed:14:e3:12:bc:96:f1 (ECDSA)
+|_  256 d9:88:1f:68:43:8e:d4:2a:52:fc:f0:66:d4:b9:ee:6b (ED25519)
+80/tcp  open   http    nginx 1.18.0 (Ubuntu)
+|_http-title: Welcome to Nocturnal
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+443/tcp closed https
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
+
+## Adding Vhost
+when we try to access the page we get 302
+```bash
+$ curl 10.10.11.64 -v
+..Snip..
+< HTTP/1.1 302 Moved Temporarily
+< Server: nginx/1.18.0 (Ubuntu)
+< Date: Sun, 15 Jun 2025 12:49:46 GMT
+< Content-Type: text/html
+< Content-Length: 154
+< Connection: keep-alive
+< Location: http://nocturnal.htb/
+```
+
+let's go ahead and add the domain to our `/etc/hosts` file
+```bash
+echo "10.10.11.64 nocturnal.htb" | sudo tee -a /etc/hosts
+```
+
+## HTTP Server
+after visiting http://nocturnal.htb/ we get greeted with a web app for storing documents. Let's have a closer look.
+- Possible SQLi for `/login.php` or `/register.php` *but skipped testing for now.*
+- upon logging in we get redirected to `/dashboard.php` where we can upload files
+	did some testing for file Upload attacks but the files don't seem to get executed. 
+- While trying to find an file Upload attack I found `/view.php` which had a few interesting Parameters
+### `/view.php`
+on the dashboard we can access uploaded files via a link to `/view.php?username=porotscho&file=document.odt` which let's us Download the file *so no code execution for now ):* 
+But when we refer to file that doesn't exist we can list our files.
+![[Screenshot 2025-06-15 153746.png]]
+Maybe this skips authentication? Let's make another account and see if we can see his files
+
+Logged in as "porotscho1" we can make a request to `/view.php` with the username parameter set to porotscho
+![[Screenshot 2025-06-15 153746 1.png]]
+
+Awesome now that we have a PoC we can see if there are more users on the system

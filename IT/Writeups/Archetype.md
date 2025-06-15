@@ -200,10 +200,10 @@ after some digging I found that both flags were stored on the users Desktop's
 **root flag:** `C:\Users\administrator\Desktop\root.txt`
 
 # Conclusion
-so this was my first real windows CTF and I got stuck a lot at the windows parts especially trying to do Privilege escalation on windows was a pain in the Ass but I could do A lot with the SMB which saved my ass a bit.
+so this was my first real windows CTF and I got stuck a lot at the windows parts especially trying to do Privilege escalation on windows was a pain, but I could do a lot with the SMB which saved my ass a bit.
 
 **What I learned:**
-- You can do A lot of exploitation with MS-SQL
+- You can do a lot with MS-SQL
 - File transfers are really different on Windows
 - How to run scripts in windows terminals
 - Always check out SMB shares with `smbclient`
