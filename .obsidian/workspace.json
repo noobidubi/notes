@@ -84,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -191,14 +192,15 @@
   },
   "active": "2364b89fa2074b12",
   "lastOpenFiles": [
-    "Screenshot 2025-06-15 153746 1.png",
-    "Screenshot 2025-06-15 153746.png",
+    "Pasted image 20250616153229.png",
+    "index.md",
+    "_images/Screenshot 2025-06-15 153746.png",
     "IT/Writeups/Nocturnal.md",
+    "_images/Screenshot 2025-06-15 153746 1.png",
     "IT/Writeups/Lo-Fi.md",
     "IT/Writeups/Linke.sx.md",
     "IT/Writeups/Basic Pentesting.md",
     "IT/Writeups/Archetype.md",
-    "index.md",
     "School/US-Geschichte.md",
     "Ereignisse der US-Geschichte.md",
     "_images/Pasted image 20250520201122.png",

