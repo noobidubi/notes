@@ -3,14 +3,18 @@ Hey These are my markdown notes mainly focused around **Cyber-security** but I a
 - **Projects**
 	- **[[Apple pwnbox(on mac mini 2009)]]:** 
 		- [ ] Test System for security Issues + Remove all of my  *Personal* Credentials
-		- [ ] Create a folder for persistent storage + *maybe backup script for backing persistent folder up in a NFS share*
-		- [ ] Make storage non-persistent
-		- [ ] Also setup wine / wine-tricks for windows emulation(*Burp Premium*)
 	- **Jailbreak Android:**
 		Wanna do some experimentation with android maybe adding a subsystem or VM within one of my phones basically having something like dual boot
 - **HomeLab**
 	- [ ] **Setup Git-tea**
 		*for backing up my dot-files and Notes*
+	- [ ] **Setup Pi-Hole**
+		for ad blocking and adding custom DNS entry's *also configure with tailscale*
+	- **Finish Configuring Jellyfin**
+		- [ ] Make a new role in tailscale for jellyfin access 
+		- [ ] Fix all Metadata Issues
+		- [ ] Have a look at Transcoding
+		- [ ] *optional:* add Live TV functionality
 - **Hack The Box: Academy**
 	- **Bug Bounty Hunting Path**
 		- [ ] [Introduction to Web Applications](https://academy.hackthebox.com/module/details/75)
