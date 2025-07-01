@@ -8,13 +8,14 @@ Hey These are my markdown notes mainly focused around **Cyber-security** but I a
 - **HomeLab**
 	- [ ] **Setup Git-tea**
 		*for backing up my dot-files and Notes*
-	- [ ] **Setup Pi-Hole**
+	- [x] **Setup Pi-Hole**
 		for ad blocking and adding custom DNS entry's *also configure with tailscale*
 	- **Finish Configuring Jellyfin**
 		- [ ] Make a new role in tailscale for jellyfin access 
 		- [ ] Fix all Metadata Issues
 		- [ ] Have a look at Transcoding
 		- [ ] *optional:* add Live TV functionality
+	- **Setup a Password Manager**
 - **Hack The Box: Academy**
 	- **Bug Bounty Hunting Path**
 		- [ ] [Introduction to Web Applications](https://academy.hackthebox.com/module/details/75)
