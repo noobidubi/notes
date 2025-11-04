@@ -31,7 +31,8 @@
     "iconsInLinksEnabled": true,
     "iconIdentifier": ":",
     "lucideIconPackType": "none",
-    "debugMode": false
+    "debugMode": false,
+    "useInternalPlugins": false
   },
   "IT/Notes": "RiPencilFill",
   "IT/Projects": "RiPencilRulerFill",
